@@ -73,7 +73,7 @@ function getPlugins(isProduction) {
         : '[name].css',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(process.cwd(), 'src', 'index.html'),
+      template: path.resolve(process.cwd(), 'public', 'index.html'),
     }),
   ];
 }
@@ -97,7 +97,7 @@ function getBaseParams(isProduction) {
       path: path.resolve(process.cwd(), 'dist')
     },
     resolve: {
-      extensions: ['.jsx', '.js']
+      extensions: ['.jsx', '.js', '.json']
     },
     devtool: isProduction ? undefined : 'inline-source-map',
   }
